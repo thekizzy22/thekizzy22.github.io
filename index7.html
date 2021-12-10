@@ -11,15 +11,52 @@
             --box-size: 80px;
         }
 
+        .content { 
+            background-color: rebeccapurple;
+            padding: 0.5em 0.6em;
+        }
+
         .animation-container { 
             height: 400px;
             width: 100vw;
+            position: relative;
         }
 
-        .animation-container > .square { 
+        .animation-container > .circle { 
             width: var(--box-size);
             height: var(--box-size);
+            border-radius: 100%;
             background-color: pink;
+            position: absolute;
+            left: --box-size;
+            top: --box-size;
+            animation-name: slide;
+            animation-duration: 5s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+            transition: all 1s ease-in;
+        }
+
+        @keyframes slide { 
+            25% { 
+                width: calc(var(--box-size) * 1.5);
+                height: calc(var(--box-size) * 1.5);
+            }
+
+            50% { 
+                width: calc(var(--box-size) * 0.5);
+                height: calc(var(--box-size) * 1.5);
+            }
+
+            75% { 
+                width: calc(var(--box-size) * 1.25);
+                height: calc(var(--box-size) * 1.5);
+            }
+
+            100% { 
+                width: var(--box-size);
+                height: var(--box-size);
+            }
         }
     </style>
 </head>
