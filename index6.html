@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/index.css" />
+    <title>Animation 1</title>
+    <style>
+        :root { 
+            --box-size: 80px;
+        }
+
+        .animation-container { 
+            height: 400px;
+            width: 100vw;
+            position: relative;
+        }
+
+        .animation-container > .circle { 
+            width: var(--box-size);
+            height: var(--box-size);
+            border-radius: 100%;
+            background-color: pink;
+            position: absolute;
+            left: --box-size;
+            top: --box-size;
+            animation: slide 5s ease-in;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes slide { 
+            25% { 
+                left: calc(100% - var(--box-size));
+                top: --box-size;
+            }
+
+            50% { 
+                left: calc(100% - var(--box-size));
+                top: calc(100% - var(--box-size));
+            }
+
+            75% { 
+                left: --box-size;
+                top: calc(100% - var(--box-size));
+            }
+
+            100% { 
+                left: --box-size;
+                top: --box-size;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <header class="header">
+            <section class="hero">
+                <h1>Contact</h1>
+            </section>
+            <nav class="top-navigation">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="/index.html">Home</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="content">
+            <div class="animation-container">
+                <div class="circle"></div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
