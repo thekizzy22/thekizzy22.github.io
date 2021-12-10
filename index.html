@@ -7,9 +7,31 @@
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="/index.css" />
     <style>
+        .hero h1 { 
+            animation-name: fs;
+            animation-duration: 5s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes fs {
+            25% { 
+                font-size: 0.8em;
+            }
+
+            50% { 
+                font-size: 1.3em;
+            }
+
+            75% { 
+                font-size: 1.8em;
+            }
+
+            100% { 
+                font-size: 1em;
+            }
+        }
     </style>
-   
-  
   <body>
     <div class="content-wrapper">
         <header class="header">
@@ -35,9 +57,6 @@
                     </li>
                     <li class="nav-item">
                         <a href="/index6.html">Animation 1</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/index7.html">Animation 2</a>
                     </li>
                 </ul>
             </nav>

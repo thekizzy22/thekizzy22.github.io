@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="/index.css" />
-    <title>Animation 1</title>
+    <title>Animation 2</title>
     <style>
         :root { 
             --box-size: 80px;
@@ -22,10 +22,9 @@
             position: relative;
         }
 
-        .animation-container > .circle { 
+        .animation-container > .square { 
             width: var(--box-size);
             height: var(--box-size);
-            border-radius: 100%;
             background-color: pink;
             position: absolute;
             left: --box-size;
@@ -39,23 +38,23 @@
 
         @keyframes slide { 
             25% { 
-                left: calc(100% - var(--box-size));
-                top: --box-size;
+                width: calc(var(--box-size) * 1.5);
+                height: calc(var(--box-size) * 1.5);
             }
 
             50% { 
-                left: calc(100% - var(--box-size));
-                top: calc(100% - var(--box-size));
+                width: calc(var(--box-size) * 0.5);
+                height: calc(var(--box-size) * 1.5);
             }
 
             75% { 
-                left: --box-size;
-                top: calc(100% - var(--box-size));
+                width: calc(var(--box-size) * 1.25);
+                height: calc(var(--box-size) * 1.5);
             }
 
             100% { 
-                left: --box-size;
-                top: --box-size;
+                width: var(--box-size);
+                height: var(--box-size);
             }
         }
     </style>
@@ -64,7 +63,7 @@
     <div class="content-wrapper">
         <header class="header">
             <section class="hero">
-                <h1>Contact</h1>
+                <h1>Animation 2</h1>
             </section>
             <nav class="top-navigation">
                 <ul class="nav">
@@ -76,7 +75,7 @@
         </header>
         <main class="content">
             <div class="animation-container">
-                <div class="circle"></div>
+                <div class="square"></div>
             </div>
         </main>
     </div>
